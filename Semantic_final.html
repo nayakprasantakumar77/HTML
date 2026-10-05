@@ -1,0 +1,1033 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Semantic Department Website</title> 
+<style> 
+* { 
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+} 
+html { 
+scroll-behavior: smooth; 
+} 
+body { 
+font-family: Arial, Helvetica, sans-serif; 
+background-color: #f5f5f5; 
+color: #333; 
+line-height: 1.6; 
+} 
+ 
+header { 
+background-color: rgb(210, 6, 190); 
+color: white; 
+padding: 25px 20px 15px; 
+text-align: center; 
+} 
+header h1 { 
+font-family: cursive; 
+font-size: 38px; 
+text-shadow: 3px 3px 3px black; 
+margin-bottom: 20px; 
+} 
+nav ul { 
+list-style: none; 
+display: flex; 
+justify-content: space-around; 
+flex-wrap: wrap; 
+gap: 10px; 
+} 
+nav ul li a { 
+color: white; 
+text-decoration: none; 
+font-weight: bold; 
+padding: 10px 15px; 
+display: block; 
+border-radius: 8px; 
+} 
+nav ul li a:hover { 
+background-color: white; 
+
+color: rgb(210, 6, 190); 
+} 
+section { 
+width: 90%; 
+margin: 25px auto; 
+padding: 35px; 
+background-color: white; 
+border-radius: 15px; 
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+} 
+section h2 { 
+text-align: center; 
+font-family: monospace; 
+font-size: 30px; 
+color: rgb(235, 154, 13); 
+text-shadow: 1px 1px 2px black; 
+margin-bottom: 25px; 
+} 
+section h3 { 
+text-align: center; 
+margin-bottom: 12px; 
+color: rgb(210, 6, 190); 
+} 
+p { 
+margin: 12px 0; 
+font-size: 17px; 
+line-height: 1.7; 
+} 
+  
+.welcome { 
+text-align: center; 
+font-size: 20px; 
+} 
+.home-intro { 
+background-color: #f9e8f7; 
+padding: 25px; 
+border-radius: 12px; 
+margin-bottom: 25px; 
+text-align: center; 
+} 
+.highlight-container { 
+display: flex; 
+justify-content: center; 
+flex-wrap: wrap; 
+gap: 20px; 
+margin-top: 25px; 
+} 
+.highlight-card { 
+width: 230px; 
+background-color: #fff5fd; 
+border-radius: 12px; 
+padding: 15px; 
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); 
+text-align: center; 
+} 
+.highlight-card img { 
+width: 100%; 
+height: 150px; 
+  
+object-fit: cover; 
+border-radius: 10px; 
+} 
+.highlight-card h3 { 
+margin-top: 12px; 
+} 
+.about-container { 
+display: flex; 
+flex-wrap: wrap; 
+justify-content: center; 
+gap: 20px; 
+} 
+.about-card { 
+width: 300px; 
+padding: 25px; 
+background-color: #f9e8f7; 
+border-radius: 15px; 
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12); 
+} 
+.about-card p { 
+text-align: justify; 
+} 
+.faculty-container { 
+display: flex; 
+justify-content: center; 
+flex-wrap: wrap; 
+ 
+gap: 25px; 
+} 
+.faculty-card { 
+width: 260px; 
+padding: 20px; 
+background-color: #f9e8f7; 
+border-radius: 15px; 
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+text-align: center; 
+} 
+.faculty-card img { 
+width: 150px; 
+height: 150px; 
+object-fit: cover; 
+border-radius: 50%; 
+border: 3px solid black; 
+margin-bottom: 15px; 
+} 
+.faculty-card p { 
+font-size: 15px; 
+} 
+.course-container { 
+display: flex; 
+flex-wrap: wrap; 
+justify-content: center; 
+gap: 20px; 
+} 
+.course-card { 
+ 
+width: 300px; 
+padding: 25px; 
+background-color: #f9e8f7; 
+border-radius: 15px; 
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); 
+} 
+.course-card ul { 
+padding-left: 25px; 
+} 
+.course-card li { 
+margin: 8px 0; 
+} 
+.table-container { 
+overflow-x: auto; 
+} 
+table { 
+width: 100%; 
+border-collapse: collapse; 
+margin-top: 20px; 
+} 
+th, 
+td { 
+border: 1px solid #555; 
+padding: 12px; 
+text-align: center; 
+} 
+th { 
+  
+background-color: rgb(210, 6, 190); 
+color: white; 
+} 
+tr:nth-child(even) { 
+background-color: #f9e8f7; 
+} 
+.achievement-container { 
+display: flex; 
+justify-content: center; 
+flex-wrap: wrap; 
+gap: 25px; 
+} 
+.achievement-card { 
+width: 300px; 
+padding: 25px; 
+background-color: #fff5fd; 
+border-radius: 15px; 
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); 
+} 
+.achievement-card ul { 
+padding-left: 25px; 
+} 
+.achievement-card li { 
+margin: 35px ; 
+} 
+
+.event-container { 
+display: flex; 
+justify-content: center; 
+flex-wrap: wrap; 
+gap: 25px; 
+} 
+.event-card { 
+width: 300px; 
+padding: 25px; 
+background-color: #f9e8f7; 
+border-radius: 15px; 
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); 
+margin: 20px; 
+} 
+.event-card p { 
+text-align: justify; 
+} 
+.contact-container { 
+display: flex; 
+justify-content: center; 
+flex-wrap: wrap; 
+gap: 30px; 
+} 
+.contact-info, 
+.contact-form { 
+width: 450px; 
+padding: 25px; 
+background-color: #f9e8f7; 
+border-radius: 15px; 
+ 
+} 
+.contact-info p { 
+text-align: left; 
+} 
+form label { 
+font-weight: bold; 
+} 
+input, 
+textarea, 
+select { 
+width: 100%; 
+padding: 12px; 
+margin: 8px 0 15px; 
+border: 1px solid #aaa; 
+border-radius: 8px; 
+} 
+textarea { 
+height: 120px; 
+resize: vertical; 
+} 
+button { 
+background-color: rgb(210, 6, 190); 
+color: white; 
+border: none; 
+padding: 12px 25px; 
+border-radius: 8px; 
+cursor: pointer; 
+font-weight: bold; 
+} 
+ 
+button:hover { 
+background-color: rgb(170, 0, 150); 
+} 
+footer { 
+background-color: rgb(210, 6, 190); 
+color: white; 
+text-align: center; 
+padding: 25px; 
+margin-top: 30px; 
+} 
+footer p { 
+margin: 5px; 
+} 
+@media (max-width: 700px) { 
+header h1 { 
+font-size: 28px; 
+} 
+nav ul { 
+flex-direction: column; 
+align-items: center; 
+} 
+section { 
+width: 95%; 
+padding: 20px; 
+} 
+
+.faculty-card, 
+.course-card, 
+.achievement-card, 
+.event-card, 
+.about-card, 
+.contact-info, 
+.contact-form { 
+width: 100%; 
+} 
+} 
+</style> 
+</head> 
+<body> 
+<header> 
+<h1>Semantic Department Website</h1> 
+<nav> 
+<ul> 
+<li><a href="#home">Home</a></li> 
+<li><a href="#about">About Department</a></li> 
+<li><a href="#faculty">Faculty</a></li> 
+<li><a href="#courses">Courses</a></li> 
+ 
+<li><a href="#timetable">Timetable</a></li> 
+<li><a href="#achievements">Achievements</a></li> 
+<li><a href="#events">Events</a></li> 
+<li><a href="#contact">Contact</a></li> 
+</ul> 
+</nav> 
+</header> 
+<section id="home"> 
+<h2>Home</h2> 
+<div class="home-intro"> 
+<h3>Welcome to the Department of Computer Applications</h3> 
+<p class="welcome"> 
+The Department of Computer Applications is committed to 
+providing quality education in computer science, programming, 
+data science, software development and emerging technologies. 
+</p> 
+<p> 
+ 
+Our department provides a learning environment where students 
+can develop technical knowledge, problem-solving skills, 
+communication abilities and professional competencies. 
+Students are encouraged to participate in practical projects, 
+technical events, workshops, seminars and other academic 
+activities. 
+</p> 
+</div> 
+<h3>Department Highlights</h3> 
+<div class="highlight-container"> 
+<article class="highlight-card"> 
+<img src="./alexandra_koch-ai-7977960_1920.jpg" 
+alt="Artificial Intelligence"> 
+<h3>Artificial Intelligence</h3> 
+<p> 
+Students learn about artificial intelligence, 
+machine learning and modern intelligent systems. 
+</p> 
+</article> 
+<article class="highlight-card"> 
+<img src="./piro4d-dice-1963036.jpg" 
+alt="Data Science"> 
+<h3>Data Science</h3> 
+  
+<p> 
+Data analysis, Python programming, statistics and 
+machine learning are important parts of the learning 
+process. 
+</p> 
+</article> 
+<article class="highlight-card"> 
+<img src="./thedigitalartist-anonymous-2755365_1920.jpg" 
+alt="Technology"> 
+<h3>Modern Technology</h3> 
+<p> 
+The department introduces students to modern tools, 
+frameworks and technologies used in the IT industry. 
+</p> 
+</article> 
+<article class="highlight-card"> 
+<img src="./this_is_engineering-engineer-4690505.jpg" 
+alt="Engineering and Innovation"> 
+<h3>Innovation</h3> 
+<p> 
+Students are encouraged to build projects and develop 
+innovative solutions to real-world problems. 
+</p> 
+ 
+</article> 
+</div> 
+</section> 
+<section id="about"> 
+<h2>About Department</h2> 
+<p> 
+The Department of Computer Applications focuses on developing 
+skilled professionals who can understand, design and implement 
+computer-based solutions. The department combines theoretical 
+concepts with practical learning so that students can confidently 
+apply their knowledge to real-world situations. 
+</p> 
+<div class="about-container"> 
+<article class="about-card"> 
+<h3>Vision</h3> 
+<p> 
+To become a centre of excellence in computer applications 
+education by developing technically competent, 
+innovative and socially responsible professionals who can 
+contribute effectively to the technology-driven world. 
+ 
+</p> 
+</article> 
+<article class="about-card"> 
+<h3>Mission</h3> 
+<p> 
+To provide quality education through effective teaching, 
+practical training, research and industry-oriented 
+learning. The department aims to develop technical, 
+analytical, communication and problem-solving skills 
+among students. 
+</p> 
+</article> 
+<article class="about-card"> 
+<h3>Objectives</h3> 
+<p> 
+The department aims to strengthen programming skills, 
+improve analytical thinking, encourage innovation, 
+introduce students to emerging technologies and prepare 
+students for higher education and professional careers. 
+</p> 
+</article> 
+  
+<article class="about-card"> 
+<h3>Learning Environment</h3> 
+<p> 
+Students receive opportunities to learn through classroom 
+teaching, laboratory sessions, assignments, projects, 
+presentations, seminars and technical activities. 
+Practical exposure helps students connect academic 
+concepts with real-world applications. 
+</p> 
+</article> 
+<article class="about-card"> 
+<h3>Career Development</h3> 
+<p> 
+The department supports students in developing skills 
+required for careers in software development, data 
+analytics, data science, web development, database 
+management, cloud computing and other IT-related fields. 
+</p> 
+</article> 
+<article class="about-card"> 
+<h3>Industry Orientation</h3> 
+  
+<p> 
+The curriculum and academic activities encourage students 
+to understand current industry requirements and develop 
+practical knowledge through projects, workshops, 
+presentations and technology-based activities. 
+</p> 
+</article> 
+</div> 
+</section> 
+<section id="faculty"> 
+<h2>Faculty</h2> 
+<p> 
+Our faculty members play an important role in guiding students 
+throughout their academic journey. They provide theoretical 
+knowledge, practical guidance and mentorship in different areas 
+of computer applications and technology. 
+</p> 
+<div class="faculty-container"> 
+<!-- LENIN SIR --> 
+<article class="faculty-card"> 
+ 
+<img src="./photos/Lelinsir.jpeg" 
+alt="Lenin Sir"> 
+<h3>Lenin Sir</h3> 
+<p> 
+<b>Designation:</b><br> 
+HOD of MCA & Professor 
+</p> 
+<p> 
+<b>Subject:</b><br> 
+Advanced Computing 
+</p> 
+<p> 
+<b>Teaching Focus:</b><br> 
+Advanced computing concepts and academic guidance. 
+</p> 
+</article> 
+<!-- OLETI DURGA BRAVISH --> 
+<article class="faculty-card"> 
+<img src="./photos/Durga sir.jpeg" 
+alt="Oleti Durga Bravish"> 
+<h3>Oleti Durga Bravish</h3> 
+<p> 
+<b>Designation:</b><br> 
+Faculty 
+
+</p> 
+<p> 
+<b>Subject:</b><br> 
+Advanced Data Science Techniques 
+</p> 
+<p> 
+<b>Course Code:</b><br> 
+E1CAB 604 
+</p> 
+<p> 
+<b>Teaching Focus:</b><br> 
+Data science concepts and analytical techniques. 
+</p> 
+</article> 
+<!-- DHARSHINEE NAGARAJAN --> 
+<article class="faculty-card"> 
+<img src="./photos/Dharshinee ma'am.png" 
+alt="Dharshinee Nagarajan"> 
+<h3>Dharshinee Nagarajan</h3> 
+<p> 
+<b>Designation:</b><br> 
+Faculty 
+</p> 
+<p> 
+<b>Subject:</b><br> 
+ 
+Communication and Life Skills - I 
+</p> 
+<p> 
+<b>Course Code:</b><br> 
+E1CAB 601 
+</p> 
+<p> 
+<b>Teaching Focus:</b><br> 
+Communication skills and professional development. 
+</p> 
+</article> 
+<!-- PRAMISHA GEWALI --> 
+<article class="faculty-card"> 
+<img src="./photos/Pramisha ma'am.jpeg" 
+alt="Pramisha Gewali"> 
+<h3>Pramisha Gewali</h3> 
+<p> 
+<b>Designation:</b><br> 
+Faculty 
+</p> 
+<p> 
+<b>Subject:</b><br> 
+Discrete Structures 
+</p> 
+<p> 
+
+<b>Course Code:</b><br> 
+E1CAB 600 
+</p> 
+<p> 
+<b>Teaching Focus:</b><br> 
+Mathematical and logical foundations of computing. 
+</p> 
+</article> 
+<!-- VEERA RAGHAVAIAH KATHULA --> 
+<article class="faculty-card"> 
+<img src="./photos/Raghavsir.jpeg" 
+alt="Veera Raghavaiah Kathula"> 
+<h3>Veera Raghavaiah Kathula</h3> 
+<p> 
+<b>Designation:</b><br> 
+Faculty 
+</p> 
+<p> 
+<b>Subject:</b><br> 
+Front-End Frameworks and Technologies 
+</p> 
+<p> 
+<b>Course Code:</b><br> 
+E1CAB 606 
+</p> 
+ 
+<p> 
+<b>Teaching Focus:</b><br> 
+Web development and front-end technologies. 
+</p> 
+</article> 
+<!-- AJIITH PANDIAN S --> 
+<article class="faculty-card"> 
+<img src="./photos/Ajith sir.png" 
+alt="Ajiith Pandian S"> 
+<h3>Ajiith Pandian S</h3> 
+<p> 
+<b>Designation:</b><br> 
+Faculty 
+</p> 
+<p> 
+<b>Subject:</b><br> 
+Problem Solving Through Aptitude - I 
+</p> 
+<p> 
+<b>Course Code:</b><br> 
+E1CAB 602 
+</p> 
+<p> 
+<b>Teaching Focus:</b><br> 
+Logical reasoning, aptitude and problem-solving skills. 
+</p> 
+ 
+</article> 
+<!-- KUSHAL I HUDDAR --> 
+<article class="faculty-card"> 
+<img src="./photos/Kushal sir.png" 
+alt="Kushal I Huddar"> 
+<h3>Kushal I Huddar</h3> 
+<p> 
+<b>Designation:</b><br> 
+Faculty 
+</p> 
+<p> 
+<b>Subject:</b><br> 
+Mastering Python: From Basics to Advanced 
+</p> 
+<p> 
+<b>Course Code:</b><br> 
+E1CAB 603 
+</p> 
+<p> 
+<b>Teaching Focus:</b><br> 
+Python programming and practical application development. 
+</p> 
+</article> 
+</div> 
+ 
+</section> 
+<section id="courses"> 
+<h2>Courses</h2> 
+<p> 
+The department offers courses designed to build strong foundations 
+in computer applications while introducing students to advanced 
+technologies. The curriculum combines programming, mathematics, 
+communication, data science and practical technology skills. 
+</p> 
+<div class="course-container"> 
+<article class="course-card"> 
+<h3>Programming</h3> 
+<ul> 
+<li>Python Programming</li> 
+<li>Programming Fundamentals</li> 
+<li>Problem Solving</li> 
+<li>Object-Oriented Programming</li> 
+ 
+<li>Data Structures</li> 
+</ul> 
+</article> 
+<article class="course-card"> 
+<h3>Data Science</h3> 
+<ul> 
+<li>Data Analysis</li> 
+<li>Statistics</li> 
+<li>Machine Learning</li> 
+<li>Data Visualization</li> 
+<li>Advanced Data Science</li> 
+</ul> 
+</article> 
+<article class="course-card"> 
+<h3>Web Technologies</h3> 
+<ul> 
+<li>HTML</li> 
+<li>CSS</li> 
+ 
+<li>JavaScript</li> 
+<li>Front-End Frameworks</li> 
+<li>Web Application Development</li> 
+</ul> 
+</article> 
+<article class="course-card"> 
+<h3>Core Computing</h3> 
+<ul> 
+<li>Computer Networks</li> 
+<li>Operating Systems</li> 
+<li>Database Management</li> 
+<li>Software Engineering</li> 
+<li>Advanced Computing</li> 
+</ul> 
+</article> 
+<article class="course-card"> 
+<h3>Professional Skills</h3> 
+  
+<ul> 
+<li>Communication Skills</li> 
+<li>Life Skills</li> 
+<li>Aptitude</li> 
+<li>Logical Reasoning</li> 
+<li>Presentation Skills</li> 
+</ul> 
+</article> 
+<article class="course-card"> 
+<h3>Practical Learning</h3> 
+<ul> 
+<li>Laboratory Sessions</li> 
+<li>Mini Projects</li> 
+<li>Major Projects</li> 
+<li>Technical Presentations</li> 
+<li>Workshops</li> 
+</ul> 
+</article> 
+
+</div> 
+</section> 
+<section id="timetable"> 
+<h2>Timetable</h2> 
+<p> 
+The timetable is designed to provide a balanced combination of 
+theory classes, practical laboratory sessions and skill-based 
+learning activities. Students are expected to attend classes 
+regularly and participate actively in laboratory work. 
+</p> 
+<h3>Class Timetable</h3> 
+<div class="table-container"> 
+<table> 
+<tr> 
+<th>Day</th> 
+<th>9:00 - 10:00</th> 
+<th>10:00 - 11:00</th> 
+<th>11:15 - 12:15</th> 
+<th>12:15 - 1:15</th> 
+<th>2:00 - 3:00</th> 
+<th>3:00 - 4:00</th> 
+ 
+</tr> 
+<tr> 
+<td>Monday</td> 
+<td>Python</td> 
+<td>Discrete Structures</td> 
+<td>Data Science</td> 
+<td>Communication</td> 
+<td>Web Technology</td> 
+<td>Lab</td> 
+</tr> 
+<tr> 
+<td>Tuesday</td> 
+<td>Data Science</td> 
+<td>Python</td> 
+<td>Aptitude</td> 
+<td>Discrete Structures</td> 
+<td>Web Technology</td> 
+ 
+<td>Lab</td> 
+</tr> 
+<tr> 
+<td>Wednesday</td> 
+<td>Web Technology</td> 
+<td>Python</td> 
+<td>Communication</td> 
+<td>Data Science</td> 
+<td>Advanced Computing</td> 
+<td>Project</td> 
+</tr> 
+<tr> 
+<td>Thursday</td> 
+<td>Discrete Structures</td> 
+<td>Data Science</td> 
+<td>Python</td> 
+<td>Aptitude</td> 
+<td>Lab</td> 
+ 
+<td>Lab</td> 
+</tr> 
+<tr> 
+<td>Friday</td> 
+<td>Advanced Computing</td> 
+<td>Web Technology</td> 
+<td>Python</td> 
+<td>Communication</td> 
+<td>Data Science</td> 
+<td>Seminar</td> 
+</tr> 
+</table> 
+</div> 
+<h3 style="margin-top: 30px;">Lab Schedule</h3> 
+<div class="table-container"> 
+<table> 
+<tr> 
+
+<th>Day</th> 
+<th>Lab</th> 
+<th>Activity</th> 
+<th>Learning Outcome</th> 
+</tr> 
+<tr> 
+<td>Monday</td> 
+<td>Programming Lab</td> 
+<td>Python Programming</td> 
+<td>Develop programming and problem-solving skills</td> 
+</tr> 
+<tr> 
+<td>Tuesday</td> 
+<td>Web Lab</td> 
+<td>HTML, CSS and JavaScript</td> 
+<td>Build interactive web pages</td> 
+</tr> 
+<tr> 
+<td>Thursday</td> 
+ 
+<td>Data Science Lab</td> 
+<td>Data Analysis</td> 
+<td>Analyze and visualize datasets</td> 
+</tr> 
+<tr> 
+<td>Friday</td> 
+<td>Project Lab</td> 
+<td>Mini Project Development</td> 
+<td>Apply theoretical knowledge to real problems</td> 
+</tr> 
+</table> 
+</div> 
+</section> 
+<section id="achievements"> 
+<h2>Achievements</h2> 
+<p> 
+ 
+The department encourages students and faculty members to 
+participate in academic, technical and professional activities. 
+These activities help develop confidence, creativity, leadership 
+and practical knowledge. 
+</p> 
+<div class="achievement-container"> 
+<article class="achievement-card"> 
+<h3>Student Achievements</h3> 
+<ul> 
+<li>Participation in coding competitions</li> 
+<li>Successful completion of technical projects</li> 
+<li>Participation in hackathons</li> 
+<li>Technical paper presentations</li> 
+<li>Participation in workshops and seminars</li> 
+<li>Development of innovative applications</li> 
+</ul> 
+</article> 
+<article class="achievement-card"> 
+<h3>Faculty Achievements</h3> 
+ 
+<ul> 
+<li>Academic mentoring of students</li> 
+<li>Conducting technical workshops</li> 
+<li>Guiding student projects</li> 
+<li>Organizing seminars and academic activities</li> 
+<li>Supporting research and innovation</li> 
+</ul> 
+</article> 
+<article class="achievement-card"> 
+<h3>Technical Activities</h3> 
+<ul> 
+<li>Coding challenges</li> 
+<li>Project exhibitions</li> 
+<li>Programming competitions</li> 
+<li>Technology demonstrations</li> 
+<li>Data science activities</li> 
+<li>Web development activities</li> 
+</ul> 
+ 
+</article> 
+</div> 
+</section> 
+<section id="events"> 
+<h2>Events</h2> 
+<p> 
+The department conducts various academic and extracurricular 
+activities throughout the academic year. These events provide 
+students with opportunities to interact with experts, showcase 
+their skills and gain practical exposure. 
+</p> 
+<div class="event-container"> 
+<article class="event-card"> 
+<h3>Technical Workshops</h3> 
+<p> 
+Technical workshops provide practical knowledge about 
+programming languages, data science, artificial 
+intelligence, web development and other emerging 
+technologies. 
+ 
+</p> 
+</article> 
+<article class="event-card"> 
+<h3>Hackathons</h3> 
+<p> 
+Hackathons encourage students to work in teams and create 
+innovative solutions to real-world problems using 
+programming and technology. 
+</p> 
+</article> 
+<article class="event-card"> 
+<h3>Seminars</h3> 
+<p> 
+Seminars help students understand current industry trends, 
+career opportunities and new developments in the field of 
+computer applications. 
+</p> 
+</article> 
+<article class="event-card"> 
+<h3>Project Exhibition</h3> 
+
+<p> 
+Students get an opportunity to demonstrate their academic 
+projects and explain the technologies, methodologies and 
+solutions used in their projects. 
+</p> 
+</article> 
+<article class="event-card"> 
+<h3>Coding Competitions</h3> 
+<p> 
+Coding competitions improve programming ability, logical 
+thinking, algorithmic skills and time management among 
+students. 
+</p> 
+</article> 
+<article class="event-card"> 
+<h3>Student Activities</h3> 
+<p> 
+Various student activities promote teamwork, leadership, 
+communication skills, creativity and overall personality 
+development. 
+
+</p> 
+</article> 
+</div> 
+</section> 
+<section id="contact"> 
+<h2>Contact Department</h2> 
+<p> 
+Students, parents and visitors can contact the department for 
+information related to courses, faculty, academic activities, 
+events, projects and other departmental enquiries. 
+</p> 
+<div class="contact-container"> 
+<article class="contact-info"> 
+<h3>Department Information</h3> 
+<p> 
+<b>Department:</b><br> 
+Department of Computer Applications 
+</p> 
+ 
+<p> 
+<b>Programme:</b><br> 
+Master of Computer Applications (MCA) 
+</p> 
+<p> 
+<b>Specialization:</b><br> 
+Data Science <br> 
+</p> 
+<p> 
+<b>Office Hours:</b><br> 
+Monday - Friday<br> 
+9:00 AM - 5:00 PM 
+</p> 
+<p> 
+<b>Email:</b><br> 
+mca@alliance.edu.in 
+</p> 
+<p> 
+<b>Phone:</b><br> 
++91 80461 99000 <br> 
+
++91 80461 99100<br> 
++91 80412 99200 
+</p> 
+</article> 
+<article class="contact-form"> 
+<h3>Send an Enquiry</h3> 
+<form> 
+<label for="name">Full Name</label> 
+<input 
+type="text" 
+id="name" 
+name="name" 
+placeholder="Enter your name" 
+required> 
+<label for="email">Email</label> 
+<input 
+type="email" 
+id="email" 
+name="email" 
+placeholder="Enter your email" 
+required  > 
+<label for="category">Enquiry Type</label> 
+
+<select id="category" name="category"> 
+<option value="">Select an option</option> 
+<option value="course"> 
+Course Information 
+</option> 
+<option value="faculty"> 
+Faculty Information 
+</option> 
+<option value="event"> 
+Event Information 
+</option> 
+<option value="admission"> 
+Admission Enquiry 
+</option> 
+<option value="other"> 
+Other 
+</option> 
+</select> 
+<label for="message">Message</label> 
+<textarea 
+id="message" 
+name="message" 
+placeholder="Write your message here..." 
+required > 
+</textarea>  
+<button type="submit"> 
+Submit Enquiry 
+</button> 
+</form> 
+</article> 
+</div> 
+</section> 
+<footer> 
+<p> 
+&copy; 2026 Department of Computer Applications 
+</p> 
+<p> 
+All Rights Reserved | Semantic Department Website 
+</p> 
+<p> 
+Designed for Academic Project 
+</p> 
+</footer> 
+</body> 
+</html>  
