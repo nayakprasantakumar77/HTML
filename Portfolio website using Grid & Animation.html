@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Prasanta Kumar Nayak - Portfolio</title>
+
+    <style>
+
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: lightblue;
+            color: #333;
+        }
+
+
+        
+
+        header {
+            text-align: center;
+
+            background-color: #222;
+
+            color: white;
+
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+
+
+
+        section {
+            width: 80%;
+
+            margin: 30px auto;
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.15);
+
+            animation: appear 1s ease;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+        }
+
+
+
+
+        .portfolio-list {
+            padding-left: 25px;
+        }
+
+        .portfolio-list li {
+            margin: 12px 0;
+        }
+
+        .portfolio-list a {
+            color: #222;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .portfolio-list a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+        .project-links {
+            list-style-type: none;
+
+            padding: 0;
+        }
+
+        .project-links li {
+            margin: 12px 0;
+        }
+
+        .project-links a {
+            display: inline-block;
+
+            padding: 10px 16px;
+
+            background-color: #eeeeee;
+
+            color: #222;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            transition: 0.3s;
+        }
+
+        .project-links a:hover {
+            background-color: #222;
+
+            color: white;
+
+            transform: translateX(5px);
+        }
+
+
+       
+
+        .skills {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .skill-box {
+            background-color: #eeeeee;
+
+            padding: 20px;
+
+            text-align: center;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+
+
+
+        .projects {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+
+
+        .project-box {
+            background-color: #f5f5f5;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.12);
+
+            transition:
+                transform 0.3s,
+                box-shadow 0.3s;
+
+            scroll-margin-top: 20px;
+        }
+
+        .project-box:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.20);
+        }
+
+
+        
+
+        .project-number {
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            padding: 5px 10px;
+
+            background-color: #222;
+
+            color: white;
+
+            border-radius: 15px;
+
+            font-size: 12px;
+        }
+
+
+
+
+        .project-box h3 {
+            margin-top: 10px;
+
+            margin-bottom: 10px;
+        }
+
+        .project-box p {
+            line-height: 1.6;
+
+            font-size: 14px;
+        }
+
+
+       
+
+        .technology {
+            margin-top: 15px;
+        }
+
+        .technology span {
+            display: inline-block;
+
+            padding: 5px 10px;
+
+            margin: 3px;
+
+            background-color: #dddddd;
+
+            border-radius: 4px;
+
+            font-size: 12px;
+        }
+
+
+     
+
+        footer {
+            text-align: center;
+
+            background-color: #222;
+
+            color: white;
+
+            padding: 18px;
+
+            margin-top: 30px;
+        }
+
+
+       
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+
+        }
+
+
+
+
+        @media (max-width: 900px) {
+
+            .projects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .skills {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+       
+
+        @media (max-width: 600px) {
+
+            section {
+                width: 90%;
+
+                padding: 20px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    
+
+    <header>
+
+        <h1>
+            Prasanta Kumar Nayak
+        </h1>
+
+        <p>
+            MCA Data Science Student
+        </p>
+
+        <p>
+            Interested in Data Science,
+            Python, Machine Learning
+            and Web Development
+        </p>
+
+    </header>
+
+
+    
+    <section>
+
+        <h2>
+            Portfolio Sections
+        </h2>
+
+        <ul class="portfolio-list">
+
+            <li>
+                <a href="#about">
+                    About Me
+                </a>
+            </li>
+
+            <li>
+                <a href="#skills">
+                    Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+
+          <li>
+                <a href="#contacts">
+                    Contact Me
+                </a>
+            </li>
+
+
+        </ul>
+
+    </section>
+
+
+    
+
+    <section id="about">
+
+        <h2>
+            About Me
+        </h2>
+
+        <p>
+
+            Hello! I am Prasanta Kumar Nayak,
+            an MCA Data Science student.
+
+            I am interested in Python, Data Science,
+            Machine Learning and Web Development.
+
+            I enjoy creating websites and working
+            with data and machine learning projects.
+
+        </p>
+
+    </section>
+
+
+    
+
+    <section id="skills">
+
+        <h2>
+            My Skills
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill-box">
+                Python
+            </div>
+
+            <div class="skill-box">
+                HTML
+            </div>
+
+            <div class="skill-box">
+                CSS
+            </div>
+
+            <div class="skill-box">
+                JavaScript
+            </div>
+
+            <div class="skill-box">
+                Machine Learning
+            </div>
+
+            <div class="skill-box">
+                Pandas
+            </div>
+
+            <div class="skill-box">
+                NumPy
+            </div>
+
+            <div class="skill-box">
+                Flask
+            </div>
+
+            <div class="skill-box">
+                SQL
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section id="projects">
+
+        <h2>
+            My Projects
+        </h2>
+
+        <p>
+            Click on a project to view its details:
+        </p>
+
+        <ul class="project-links">
+
+            <li>
+                <a href="#project1">
+                    Project-1 - Resume Website
+                </a>
+            </li>
+
+            <li>
+                <a href="#project2">
+                    Project-2 - Portfolio Website
+                </a>
+            </li>
+
+            <li>
+                <a href="#project3">
+                    Project-3 - Semantic Web Page
+                </a>
+            </li>
+
+            <li>
+                <a href="#project4">
+                    Project-4 - Chess Board Using Grid
+                </a>
+            </li>
+
+            <li>
+                <a href="#project5">
+                    Project-5 - Facebook Page
+                </a>
+            </li>
+
+            <li>
+                <a href="#project6">
+                    Project-6 - Birthday Card
+                </a>
+            </li>
+
+        </ul>
+
+    </section>
+
+
+   
+    <section>
+
+        <h2>
+            Project Details
+        </h2>
+
+        <div class="projects">
+
+
+     
+
+            <div class="project-box" id="project1">
+
+                <span class="project-number">
+                    Project 1
+                </span>
+
+                <h3>
+                    Resume Website
+                </h3>
+
+                <p>
+
+                    A simple resume webpage created
+                    to present personal information,
+                    education, skills, projects and
+                    contact details.
+
+                </p>
+
+                <div class="technology">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+
+                </div>
+
+            </div>
+
+
+         
+
+            <div class="project-box" id="project2">
+
+                <span class="project-number">
+                    Project 2
+                </span>
+
+                <h3>
+                    Portfolio Website
+                </h3>
+
+                <p>
+
+                    A personal portfolio website created
+                    to display my profile, skills,
+                    projects and contact information.
+
+                </p>
+
+                <div class="technology">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>CSS Grid</span>
+
+                </div>
+
+            </div>
+
+
+          
+
+            <div class="project-box" id="project3">
+
+                <span class="project-number">
+                    Project 3
+                </span>
+
+                <h3>
+                    Semantic Web Page
+                </h3>
+
+                <p>
+
+                    A webpage created using semantic
+                    HTML elements such as header,
+                    section, article, aside and footer.
+
+                </p>
+
+                <div class="technology">
+
+                    <span>HTML5</span>
+                    <span>CSS</span>
+
+                </div>
+
+            </div>
+
+
+          
+
+            <div class="project-box" id="project4">
+
+                <span class="project-number">
+                    Project 4
+                </span>
+
+                <h3>
+                    Chess Board Using Grid
+                </h3>
+
+                <p>
+
+                    A chess board created using CSS Grid.
+                    Rows and columns are arranged to
+                    create the traditional chess board.
+
+                </p>
+
+                <div class="technology">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Grid</span>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="project-box" id="project5">
+
+                <span class="project-number">
+                    Project 5
+                </span>
+
+                <h3>
+                    Facebook Page
+                </h3>
+
+                <p>
+
+                    A simple Facebook-style webpage
+                    created to practice HTML and CSS
+                    layout and webpage design.
+
+                </p>
+
+                <div class="technology">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+
+                </div>
+
+            </div>
+
+
+       
+
+            <div class="project-box" id="project6">
+
+                <span class="project-number">
+                    Project 6
+                </span>
+
+                <h3>
+                    Birthday Card
+                </h3>
+
+                <p>
+
+                    A simple birthday card webpage
+                    designed using HTML and CSS with
+                    a personal message and hover effects.
+
+                </p>
+
+                <div class="technology">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+
+                </div>
+
+            </div>
+
+
+          
+
+            
+                      
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+ 	<section id="contacts">
+
+        <h2>Contact Me</h2>
+		<p>
+        I am open to learning opportunities, internships,
+        projects, and collaborations.
+    </p>
+
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:nayakprasantakumar77@gmail.com">
+            nayakprasantakumar77@gmail.com
+        </a>
+    </p>
+
+    <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/prasanta-kumar-nayak-778786389/"
+           target="_blank">
+            View My LinkedIn Profile
+        </a>
+    </p>
+
+    <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/nayakprasantakumar77"
+           target="_blank">
+            View My GitHub Profile
+        </a>
+    </p>
+
+    <p>
+    <strong>HackerRank:</strong>
+    <a href="https://www.hackerrank.com/profile/nayakprasantaku1"
+       target="_blank">
+        View My HackerRank Profile
+    </a>
+</p>
+
+
+    </section>
+
+
+
+   
+
+    <footer>
+
+        <p>
+            © 2026 Prasanta Kumar Nayak
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+
