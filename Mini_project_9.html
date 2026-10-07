@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Student Result Dashboard</title>
+    <link rel="stylesheet" href="Result.css">
+</head>
+<body>
+    <h1>Student Result Dashboard</h1>
+
+    <nav>
+    <a href="#studentDetails">Student Details</a>
+    <a href="#marks">Marks</a>
+    <a href="#finalResult">Final Result</a>
+    </nav>
+
+    <!-- Student Details -->
+
+    <section id="studentDetails" class="card">
+    <h2>Student Details</h2>
+
+    <label>Student Name:</label>
+    <input type="text" id="studentName"  placeholder="Enter your name" required><br><br>
+
+    <label>Roll Number:</label>
+    <input type="text" id="rollnumber" placeholder="Enter your roll no." required><br><br>
+
+    <label>Course:</label>
+    <input type="text" id="course" placeholder="Enter your course" required>
+    </section>
+
+    <!-- Subject Marks -->
+
+     <section id="marks" class="card">
+    <h2>Subject-Wise Marks</h2>
+
+    <label>Python:</label>
+    <input type="number" id="python" placeholder="Enter your mark" required><br><br>
+
+    <label>Advanced Data Science:</label>
+    <input type="number" id="adst" placeholder="Enter your mark" required><br><br>
+
+    <label>Front-End Framework & Technologies:</label>
+    <input type="number" id="eft" placeholder="Enter your mark" required><br><br>
+
+    <label>Problem Solving through Apttitude:</label>
+    <input type="number" id="psta" placeholder="Enter your mark" required><br><br>
+
+    <label>Discrete Structure:</label>
+    <input type="number" id="ds" placeholder="Enter your mark" required><br><br>
+
+    <label>UI & UX Design:</label>
+    <input type="number" id="ui" placeholder="Enter your mark" required><br><br>
+
+    <label>Communication and Life Skills:</label>
+    <input type="number" id="communication" placeholder="Enter your mark" required><br><br>
+    
+
+    <!-- Calculate Button -->
+
+    <button onclick="calculateResult()">Calculate Result</button>
+    
+    </section>
+
+    <!-- Result Section -->
+
+    <section id="finalResult" class="card">
+    <h2>Student Result</h2>
+    
+    <p> Student Name: <span id="displayName"></span> </p>
+    <p> Roll Number: <span id="displayRoll"></span> </p> 
+    <p> Total Marks: <span id="total"></span> / 280 </p> 
+    <p> Average: <span id="average"></span> </p>
+    <p> Percentage: <span id="percentage"></span>% </p> 
+    <p> Grade: <span id="grade"></span> </p> 
+    <p> Result: <span id="status"></span> </p>
+    </section>
+
+    <script>
+     function calculateResult() { 
+        let name = document.getElementById("studentName").value; 
+        let roll = document.getElementById("rollnumber").value;
+        let course = document.getElementById("course").value;
+
+        let python = Number(document.getElementById("python").value); 
+        let adst = Number( document.getElementById("adst").value ); 
+        let eft = Number( document.getElementById("eft").value ); 
+        let psta = Number( document.getElementById("psta").value ); 
+        let ds = Number( document.getElementById("ds").value );  
+        let ui = Number( document.getElementById("ui").value );  
+        let communication = Number( document.getElementById("communication").value );  
+
+
+        let total = python + adst + eft + psta + ds + ui + communication;  
+
+
+        let average = total / 7;  
+        
+        
+        let percentage = (total / 280) * 100;  
+        
+        
+        let grade; 
+        if (percentage >= 90) { 
+            grade = "A+"; 
+        } 
+        
+        else if (percentage >= 80) { 
+            grade = "A"; 
+        } 
+        
+        else if (percentage >= 70) { 
+            grade = "B"; 
+        } 
+        
+        else if (percentage >= 60) { 
+            grade = "C"; 
+        } 
+        
+        else if (percentage >= 50) { 
+            grade = "D"; 
+        } 
+        
+        else { 
+            grade = "F"; 
+        } 
+        
+        
+        let status; 
+        if ( python >= 20 && adst >= 20 && eft >= 20 && psta >= 20 && ds >= 20 && ui >= 20 && communication >= 20 ) 
+        { 
+            status = "PASS"; 
+        } 
+        else { 
+            status = "FAIL"; 
+        } 
+       
+       
+        document.getElementById("displayName").innerText = name; 
+        document.getElementById("displayRoll").innerText = roll; 
+        
+        document.getElementById("total").innerText = total; 
+        document.getElementById("average").innerText = average.toFixed(2); 
+        document.getElementById("percentage").innerText = percentage.toFixed(2); 
+        document.getElementById("grade").innerText = grade; 
+        document.getElementById("status").innerText = status; 
+    } 
+    </script>
+</body>
+</html>
